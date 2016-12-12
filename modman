@@ -1,5 +1,5 @@
 app/code/local/Smdotcom/Newblock/			app/code/local/Smdotcom/Newblock/	
-app/design/frontend/rwd/default/layout/newblock.xml	app/design/frontend/rwd/default/layout/
+app/design/frontend/rwd/default/layout/newblock.xml	app/design/frontend/rwd/default/layout/newblock.xml
 app/design/frontend/rwd/default/template/newblock/	app/design/frontend/rwd/default/template/newblock/
 app/etc/modules/Smdotcom_Newblock.xml			app/etc/modules/Smdotcom_Newblock.xml
 skin/frontend/rwd/default/newblock/			skin/frontend/rwd/default/newblock/
