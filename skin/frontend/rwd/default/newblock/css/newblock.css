@@ -1,0 +1,48 @@
+.discount-form:after, {
+    content: '';
+    display: table;
+    clear: both;
+}
+#text-form,
+.cart .giftcard {
+    width: 100%;
+}
+#text-form h2,
+.cart .giftcard h2 {
+    display: none;
+}
+#text-form label,
+.cart .giftcard label {
+    font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+    min-width: 105px;
+    display: inline-block;
+    margin-right: 10px;
+}
+#text-form .field-wrapper,
+.cart .giftcard .field-wrapper {
+    display: inline-block;
+}
+#text-form .validation-advice,
+.cart .giftcard .validation-advice {
+    display: inline;
+}
+#text-form .button-wrapper,
+.cart .giftcard .button-wrapper {
+    display: inline-block;
+    vertical-align: bottom;
+}
+#text-form .button-wrapper > button,
+.cart .giftcard .button-wrapper > button {
+    float: left;
+}
+#text-form .input-text,
+.cart .giftcard .input-text {
+    border-radius: 0;
+    height: 30px;
+    margin: 4px 10px 0 0;
+    width: 190px;
+}

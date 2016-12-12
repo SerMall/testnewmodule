@@ -1,0 +1,16 @@
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>newblock/css/newblock.css</name></action>
+            <!--<action method="addItem"><type>skin_js</type><name>newblock/js/newblock.js</name></action>-->
+        </reference>
+    </default>
+    <checkout_cart_index>
+        <reference name="checkout.cart">
+            <block type="core/text_list" name="checkout.cart.extra" translate="label">
+                <label>Checkout Forms Extra</label>
+                <block type="newblock/newblock" name="newblock_newblock"  template="newblock/newblock.phtml"/>
+            </block>
+        </reference>
+    </checkout_cart_index>
+</layout>

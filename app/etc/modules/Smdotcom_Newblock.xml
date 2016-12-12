@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Smdotcom_Newblock>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Smdotcom_Newblock>
+    </modules>
+</config>

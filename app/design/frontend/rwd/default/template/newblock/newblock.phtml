@@ -1,0 +1,41 @@
+
+<form id="text-form" >
+        <div  class="discount">
+            <div id="newblock">
+                <label for="text"><?php echo $this->__('Your text') ?></label>
+                <div class="field-wrapper">
+                    <input class="input-text" type="text" id="text" name="text" placeholder="<?php echo $this->getLastText(); ?>"  onclick="observeButton()"/>
+                    <div class="button-wrapper">
+                        <button type="submit" id="submit"  class="button2"  ><span><span><?php echo $this->__('Change') ?></span></span></button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</form>
+
+
+<script>
+    function observeButton() {
+        $('submit').observe('click', function (event) {
+            event.preventDefault();
+
+            var reloadurl = '<?php echo $this->getUrl('newblock/index/saveLastText') ?>';
+            var form = $('text-form');
+            var input = form['text'];
+            var text = Form.Element.getValue(input);
+
+            new Ajax.Request(reloadurl, {
+                method: 'post',
+                parameters: {'text':text},
+                onComplete: function (transport) {
+                    $('newblock').innerHTML = transport.responseText;
+                }
+            });
+        });
+    };
+
+    document.observe('dom:loaded', function() {
+        observeButton();
+    });
+</script>
