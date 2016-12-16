@@ -9,7 +9,7 @@ class Smdotcom_Newblock_IndexController extends Mage_Core_Controller_Front_Actio
     }
 
     public function saveLastTextAction()
-    { Mage::log($this->getRequest(),null,"my.log",true);
+    {
         if(!$this->getRequest()){
             return false;
         }
@@ -20,8 +20,17 @@ class Smdotcom_Newblock_IndexController extends Mage_Core_Controller_Front_Actio
             $this->getResponse()->setBody('EMPTY');
         }else{
             $modeltext->load($modeltext->lastId())->setText($text)->save();
-            $newtext = "SUCCSESS";
+            $newtext = "SUCCESS";
             $this->getResponse()->setBody($newtext);
         }
+    }
+
+    public function getUpdateAction()
+    {
+        $this->loadLayout();
+        $myBlock =  $this->getLayout()->createBlock('newblock/newblock');
+        $myBlock->setTemplate('newblock/newblock_form.phtml');
+        $myHtml = $myBlock->toHtml();
+        $this->getResponse()->setBody($myHtml);
     }
 }
