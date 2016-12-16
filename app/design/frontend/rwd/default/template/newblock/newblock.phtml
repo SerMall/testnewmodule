@@ -6,8 +6,7 @@
 
 <script>
     function observeButton() {
-        $('submit').observe('click', function (event) {
-//            event.preventDefault();
+        $('submit').observe('click', function () {
 
             var reloadurl = '<?php echo $this->getUrl('newblock/index/saveLastText') ?>';
             var form = $('text-form');
@@ -18,7 +17,6 @@
                 method: 'post',
                 parameters: {'text':text},
                 onComplete: function (transport) {
-
                     $("newblock").innerHTML = transport.responseText;
                     observeButton_2();
                 }
@@ -27,7 +25,6 @@
     };
 
     function observeButton_2(event) {
-//        event.preventDefault();
 
         $("box_form").observe('click', function() {
             var reloadurl = '<?php echo $this->getUrl('newblock/index/getUpdate') ?>';
@@ -38,10 +35,11 @@
                 }
             });
         });
-//        event.preventDefault();
+        event.preventDefault();
     };
 
     document.observe('dom:loaded', function() {
         observeButton();
     });
+
 </script>
